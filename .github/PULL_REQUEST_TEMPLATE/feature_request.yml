@@ -1,0 +1,36 @@
+name: ⛏️ Feature Request
+description: Request new feature or enhancement.
+# title: ""
+labels: ["feature"]
+# assignees:
+#   - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+        Please fill out this form as completely as possible.
+
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the feature you'd like to request
+      description: What you want
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: What if it exists?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: What is alternative solutions or features you've considered?
+    validations:
+      required: false

@@ -1,0 +1,92 @@
+name: 🪰 Bug Report
+description: File a bug report
+# title: ""
+labels: ["bug"]
+# assignees:
+#   - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        Please fill out this form as completely as possible.
+
+  - type: checkboxes
+    id: VerifyCanalyRelease
+    attributes:
+      label: Verify canaly release
+      description: The canary version includes all features and fixes that have not been released to the stable version yet. Some issues may already be fixed in the canary version, so please verify that your issue reproduces before opening a new issue.
+      options:
+        - label: I verified that the issue exists in the latest canary release
+          required: true
+
+  - type: dropdown
+    id: OS
+    attributes:
+      label: What OS are you seeing the problem on?
+      multiple: false
+      options:
+        - Mac
+        - Windows
+        - Linux
+        - Others
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: false
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Microsoft Edge
+        - Others
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: What environment are you seeing the problem on?
+      multiple: false
+      options:
+        - local
+        - development
+        - QA
+        - Canaly
+        - production
+    validations:
+      required: true
+
+  - type: input
+    id: relatedIssue
+    attributes:
+      label: Are there any issues releated to this issue?
+      description: Enter issue Numbers or URLs if you know.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: Want is the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What whould you like to expected to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the issue. Drop and provide screenshots if you can.
+    validations:
+      required: true

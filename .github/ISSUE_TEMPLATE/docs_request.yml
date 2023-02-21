@@ -1,0 +1,29 @@
+name: 📝 Documentation
+description: A request to update or improve the documentation
+title: "[Docs] "
+labels: ["documentation"]
+# assignees:
+#   - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the improvement or update you wish to see?
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: The URL of the document
+      description: Where is the document? Enter the URL if it exists.
+      placeholder: https://example.com
+    validations:
+      required: false
+
+
+
